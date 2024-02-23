@@ -1,3 +1,4 @@
+const container = document.querySelector(".container");
 
 document.addEventListener("DOMContentLoaded", function() {
     // Loop to create 256 div elements
