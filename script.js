@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.appendChild(div);
         //Appended div to the container element
         container.appendChild(div);
-        // console.log(container);
+        console.log(container);
 
         div.addEventListener('mouseenter', () => {
             div.style.backgroundColor = 'white';
@@ -22,11 +22,17 @@ document.addEventListener("DOMContentLoaded", function() {
             div.style.backgroundColor = 'lightgreen'
         });
     }
+
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', () => {
+    let number = parseInt(prompt('Enter the number of squares that you would like per row.'));
+    
+    //This removes all of the previously created div elements from the container. However the result still shows up on the web page. 
+    divs.forEach(div =>{
+        container.removeChild(div);
+    })
 });
 
-const btn = document.querySelector('#btn');
-btn.addEventListener('click', () => {
-    let number = parseInt(prompt('Enter the number of squares that you would like per row.'));
-    console.log(number);
-    
+  
 });
+
