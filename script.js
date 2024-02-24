@@ -26,11 +26,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const btn = document.querySelector('#btn');
     btn.addEventListener('click', () => {
     let number = parseInt(prompt('Enter the number of squares that you would like per row.'));
+
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    // const firstChild = container.firstChild;
+    // console.log(firstChild);
+    // container.removeChild(firstChild);
     
-    //This removes all of the previously created div elements from the container. However the result still shows up on the web page. 
-    divs.forEach(div =>{
-        container.removeChild(div);
-    })
+    // divs.length = 0;
 });
 
   
