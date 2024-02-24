@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.appendChild(div);
         //Appended div to the container element
         container.appendChild(div);
-        console.log(container);
+        // console.log(container);
 
         div.addEventListener('mouseenter', () => {
             div.style.backgroundColor = 'white';
@@ -24,12 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-const square = document.querySelector('.container div');
-
-square.addEventListener('mouseenter', () => {
-    square.style.backgroundColor = 'red';
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+    let number = parseInt(prompt('Enter the number of squares that you would like per row.'));
+    console.log(number);
+    
 });
-
-// square.addEventListener('mouseenter', () => {
-//     square.style.backgroundColor = 'red';
-// });
