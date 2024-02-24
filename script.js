@@ -30,6 +30,24 @@ document.addEventListener("DOMContentLoaded", function() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
+
+    for(let i = 0; i < number * number; i++) {
+        let div = document.createElement("div");
+        
+        // Append the div element to the body of the webpage
+        document.body.appendChild(div);
+        //Appended div to the container element
+        container.appendChild(div);
+
+        div.addEventListener('mouseenter', () => {
+            div.style.backgroundColor = 'white';
+        });
+
+        div.addEventListener('mouseleave', () => {
+            div.style.backgroundColor = 'lightgreen'
+        });
+
+    }
     // const firstChild = container.firstChild;
     // console.log(firstChild);
     // container.removeChild(firstChild);
