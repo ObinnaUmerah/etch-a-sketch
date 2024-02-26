@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.addEventListener('click', () => {
     let number = parseInt(prompt('Enter the number of squares that you would like per row.'));
         while(number > 100 ){
-    let number = parseInt(prompt('Please enter no larger than 100.'));
+    number = parseInt(prompt('Please enter no larger than 100.'));
     }
 
     container.innerHTML = '';
